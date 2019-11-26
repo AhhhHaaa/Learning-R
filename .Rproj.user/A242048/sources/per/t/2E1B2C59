@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573242747262.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1930092458",
+    "id" : "2E1B2C59",
+    "lastKnownWriteTime" : 1573242837,
+    "last_content_update" : 1573242837059,
+    "path" : "~/Desktop/Learning R/text mining.R",
+    "project_path" : "text mining.R",
+    "properties" : {
+        "cursorPosition" : "143,26",
+        "scrollLine" : "128",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

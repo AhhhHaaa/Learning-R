@@ -1,0 +1,512 @@
+length(test_length)
+lapply(test_length, length)
+sapply(test_length, length)
+head(url)
+data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+Time = time,
+Stars = stars,
+Vote = vote) #arguments imply differing number of rows
+test_length <- list(ranking, title, rating, genre, description, time, stars, vote)
+sapply(test_length, length)
+stars <- imdb %>%
+html_nodes(".text-muted+ p") %>%
+html_text() %>%
+as.factor()
+stars <- imdb %>%
+html_nodes(".text-muted+ p") %>%
+html_text() %>%
+as.factor()
+sapply(test_length, length)
+head(stars)
+stars <- imdb %>%
+html_nodes("#main a:nth-child(1)") %>%
+html_text() %>%
+as.factor()
+sapply(test_length, length) # apply lenth to each variables
+stars <- imdb %>%
+html_nodes("#main a:nth-child(1)") %>%
+html_text() %>%
+as.factor()
+stars <- imdb %>%
+html_nodes(".lister-item-content a:nth-child(1)") %>%
+html_text() %>%
+as.factor()
+head(satrs)
+head(stars)
+stars
+length(stars)
+sapply(test_length, length) # apply lenth to each variables
+time
+time <- imdb %>%
+html_node(".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+time
+time <- imdb %>%
+html_node(html_nodes(".genre"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+.runtime
+time <- imdb %>%
+html_node(imdb, html_nodes(".genre"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+time <- imdb %>%
+html_node(imdb, html_nodes(".genre"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+html_node(html_nodes(imdb , ".genre"), ".runtime") %>%
+html_text()
+html_node(html_nodes(imdb , ".runtime"), ".runtime") %>%
+html_text()
+data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time,
+#Stars = stars,
+Vote = vote) #arguments imply differing number of rows
+data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time,
+#Stars = stars,
+Vote = vote)
+imdb_tv <- data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time,
+#Stars = stars,
+Vote = vote)
+View(imdb_tv)
+ggplot(imdb_tv, aes(genre, ranking))+
+geom_point
+ggplot(imdb_tv, aes(genre))+
+geom_point()
+?geom_point
+plot(Genre, Ranking)
+plot(imdb_tv, Genre, Ranking)
+?plot
+imdb_tv%>%
+plot(Genre, Ranking)
+imdb_tv%>%
+plot(imdb_tv$Genre, imdb_tv$Ranking)
+plot(imdb_tv$Genre, imdb_tv$Ranking)
+plot(imdb_tv$Genre, imdb_tv$Ranking, type = "p")
+?plot
+plot(imdb_tv$Genre, imdb_tv$Ranking, type = "l")
+plot(imdb_tv$Genre, imdb_tv$Ranking, type = "b")
+plot(imdb_tv$Genre, imdb_tv$Ranking, type = "q")
+?ggplot
+genre
+genre1 <- imdb %>%
+html_nodes(".genre") %>%
+html_text()
+genre1
+genre1 <- gsub('\n', '', genre)
+genre1
+val <- c("I am Conan.", "http://fens.me, ok")
+val
+word(val, 1)
+word(genre1, 1, sep = ',')
+word(genre1, 1, sep = ',') %>%
+length()
+genre <- imdb %>%
+html_nodes(".genre") %>%
+html_text()
+genre <- gsub("\n", "", genre) %>%
+word(1, sep = '1')
+genre
+genre <- word(genre, 1, sep = '1') %>%  str_trim("right")
+genre <- imdb %>%
+html_nodes(".genre") %>%
+html_text()
+genre <- gsub("\n", "", genre)
+genre <- word(genre, 1, sep = '1') %>%  str_trim("right")
+genre
+genre <- imdb %>%
+html_nodes(".genre") %>%
+html_text()
+genre <- gsub("\n", "", genre)
+genre <- word(genre, 1, sep = ',') %>%  str_trim("right")
+genre
+imdb_tv <- data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time, leave them alone, waiting for sort out NAs
+#Stars = stars,  leave them alone, waiting for sort out NAs
+Vote = vote)
+imdb_tv$Genre
+df <- data.frame(1:10, nrow(5))
+df <- data.frame(1:12, nrow(3))
+?data.frame
+df <- data.frame(1, 1:12, nrow(3))
+df <- data.frame(x= 1, y = 1:12, nrow(3))
+df <- data.frame(x= 1, y = 1:12)
+df
+df <- data.frame(x= 1, y = 1:8)
+df
+df <- data.frame(x= 1, y = 1:8, ncol = 4)
+df
+df$x
+df <- data.frame(x= seq(8), y = 1:8, ncol = 4)
+df
+df <- data.frame(x= seq(8), y = 8:1, ncol = 4)
+df
+df$x[df$x >3]
+df$x[df$x >7] <- NA
+df
+df <- is.na(df)
+df
+df <- data.frame(x= seq(8), y = 8:1, ncol = 4)
+which()
+?which
+which(df[,3] >5)
+df[which(df[,3] >5 ), 3]
+df[which(df[,3] > 5, arr.ind = TRUE ), 3]
+df[which(df[,3] > 5, arr.ind = TRUE ), 3] <- 100
+df
+df
+df <- df[y = c(3:10)]
+df <- df[y = 3:10]
+df[y]
+df$y
+df$y <- 3:10
+df
+ggplot(imdb_tv, aes(genre, vote)) +
+geom_point()
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(fill = Genre)
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(fill = Genre)
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point()
+geom_point(aes(colour = Genre)
+geom_point(aes(colour = genre)
+geom_point(aes(fill = Genre)
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(fill = Genre)
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(fill = Genre))
+imdb_tv$Genre
+imdb_tv <- data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time, leave them alone, waiting for sort out NAs
+#Stars = stars,  leave them alone, waiting for sort out NAs
+Vote = vote) #arguments imply differing number of rows
+imdb_tv$Genre
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(fill= Genre))
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(colour= Genre))
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre))+
+corrd_flip()
+ggplot(imdb_tv, aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+imdb_tv %>%
+select(ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+imdb_tv %>%
+select(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+imdb_tv %>%
+filter(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+##TOP30 TV series in the UK
+imdb_tv %>%
+filter(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre, size = vote)) +
+coord_flip()
+##TOP30 TV series in the UK
+imdb_tv %>%
+filter(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+imdb_tv %>%
+filter(Vote >1000 )
+imdb_tv %>%
+filter(Vote >1000)
+imdb_tv %>%
+filter(Vote >= 1000)
+vote <- gsub(",", "",vote) %>% as.numeric()
+imdb_tv %>%
+filter(Vote >= 1000)
+imdb_tv %>%
+filter(Vote > 1000)
+imdb_tv %>%
+filter(vote > 1000)
+imdb_tv <- data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time, leave them alone, waiting for sort out NAs
+#Stars = stars,  leave them alone, waiting for sort out NAs
+Vote = vote) #arguments imply differing number of rows
+imdb_tv %>%
+filter(vote > 1000)
+imdb_tv %>%
+filter(Vote > 1000)
+imdb_tv %>%
+filter(Vote > 1000) %>% top_n(n = 30)
+?filter
+?group_by
+by_vs_am <- mtcars %>% group_by(vs, am)
+by_vs <- by_vs_am %>% summarise(n = n())
+by_vs
+rm(by_vs)
+rm(by_vs_am)
+rm(df)
+imdb_tv %>%
+filter(Vote > 1000) %>% top_n(n = 30) %>%
+ggplot(aes(Ranking, Vote)) +
+geom_poimt(aes(fill = Genre))
+imdb_tv %>%
+#filter(Vote > 1000) %>% top_n(n = 30) %>%
+ggplot(aes(Ranking, Vote)) +
+geom_poimt(aes(fill = Genre))
+debugSource('~/Desktop/Learning R/imdb.R', echo=TRUE)
+imdb_tv %>%
+#filter(Vote > 1000) %>% top_n(n = 30) %>%
+ggplot(aes(Ranking, Vote)) +
+geom_point(aes(fill = Genre))
+imdb_tv %>%
+#filter(Vote > 1000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre))
+?filter
+debugSource('~/Desktop/Learning R/imdb.R', echo=TRUE)
+imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre))
+imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_bar(aes(colour = Genre))
+imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_boxplot(aes(colour = Genre))
+imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre))
+##TOP30 TV series in the UK
+top30 <- imdb_tv %>%
+filter(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre, size = Vote))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(colour = Genre, size = 6))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(colour = Genre, size = 6)
+geom_point(aes(colour = Genre)
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking, size = Vote)) +
+geom_point(aes(colour = Genre)
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking, size = Vote)) +
+geom_point(aes(colour = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(Shape = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(shape = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(shape = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_line(aes(shape = Genre))
+imdb_tv
+imdb_tv$Genre
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_line(aes(shape = vector(Genre)))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_line(aes(size = vector(Genre)))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(size = vector(Genre)))
+Top10voted <- imdb_tv %>%
+#group_by(Vote, Ranking) %>%
+filter(Vote > 10000) #%>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(size = vector(Genre)))
+Top10voted <- imdb_tv %>%
+#group_by(Vote, Ranking) %>%
+filter(Vote > 10000) #%>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(size = Genre))
+class(filter(imdb_tv$Vote>1000))
+filter(imdb_tv$Vote>1000)
+imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000)
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000)
+class(Top10voted)
+class(imdb_tv$Genre)
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(color = Genre))
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(color = Genre))
+debugSource('~/Desktop/Learning R/imdb.R', echo=TRUE)
+time <- imdb %>%
+html_node(html_nodes(imdb , ".runtime"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+time <- imdb %>%
+html_node(html_nodes(imdb , ".runtime"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+library(stringr)
+library(tidyverse)
+imdb <- read_html(url)
+ranking <- imdb %>%
+html_nodes(".text-primary") %>%
+html_text() %>%
+as.numeric() #change into numeric format
+title <- imdb %>%
+html_nodes(".lister-item-header a") %>%
+html_text()
+time <- imdb %>%
+html_node(html_nodes(imdb , ".runtime"), ".runtime") %>%
+html_text() %>%
+#as.numeric(time) %>%  #change into numeric format
+str_sub(1,2)
+description <- gsub("\n","", description) %>%  #gsub() to remove \n
+#str_trim(string, side = c("both", "left", "right"))
+#remove the blanks
+str_trim( side = "left") #remove the left blanks
+description <- imdb %>%
+html_nodes(".ratings-bar+ .text-muted") %>%
+html_text()
+description <- gsub("\n","", description) %>%  #gsub() to remove \n
+#str_trim(string, side = c("both", "left", "right"))
+#remove the blanks
+str_trim( side = "left") #remove the left blanks
+genre <- imdb %>%
+html_nodes(".genre") %>%
+html_text()
+genre <- word(genre, 1, sep = ',') %>%  str_trim("right")
+vote <- imdb %>%
+html_nodes(".text-muted+ span") %>%
+html_text()
+vote <- gsub(",", "",vote) %>% as.numeric()
+stars <- imdb %>%
+html_nodes(".lister-item-content a:nth-child(1)") %>%
+html_text() %>%
+as.factor()
+imdb_tv <- data.frame(
+Ranking = ranking,
+Title = title,
+Rating = rating,
+Genre = genre,
+Description = description,
+#Time = time, leave them alone, waiting for sort out NAs
+#Stars = stars,  leave them alone, waiting for sort out NAs
+Vote = vote) #arguments imply differing number of rows
+##TOP30 TV series in the UK
+top30 <- imdb_tv %>%
+filter(Ranking <= 30) %>%
+ggplot(aes(Rating, Ranking)) +
+geom_point(aes(colour = Genre)) +
+coord_flip()
+Top10voted <- imdb_tv %>%
+group_by(Vote, Ranking) %>%
+filter(Vote > 10000) %>% top_n(n = 30) %>%
+ggplot(aes(Vote, Ranking)) +
+geom_point(aes(color = Genre))
+Top10voted
+savehistory("imdb")
+save.image("myfile")
+save.image("imdb")
+save.image("imdb")
+savehistory("imdb")

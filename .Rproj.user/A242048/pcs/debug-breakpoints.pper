@@ -1,0 +1,66 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 77,
+                "editor_state" : 1,
+                "function_name" : "toplevel",
+                "function_steps" : "",
+                "id" : 16,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 77,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "~/Desktop/Learning R/imdb.R",
+                "state" : 1,
+                "type" : 1
+            },
+            {
+                "editor_line_number" : 87,
+                "editor_state" : 1,
+                "function_name" : "toplevel",
+                "function_steps" : "",
+                "id" : 17,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 87,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/Desktop/Learning R/imdb.R",
+                "state" : 1,
+                "type" : 1
+            },
+            {
+                "editor_line_number" : 65,
+                "editor_state" : 1,
+                "function_name" : "toplevel",
+                "function_steps" : "",
+                "id" : 19,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 65,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/Desktop/Learning R/tm and textmining.R",
+                "state" : 1,
+                "type" : 1
+            },
+            {
+                "editor_line_number" : 145,
+                "editor_state" : 1,
+                "function_name" : "toplevel",
+                "function_steps" : "",
+                "id" : 22,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 145,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "~/Desktop/Learning R/week6 data visualization.R",
+                "state" : 1,
+                "type" : 1
+            }
+        ]
+    }
+}

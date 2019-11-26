@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573242770976.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CC76D5C4",
+    "lastKnownWriteTime" : 68719476740,
+    "last_content_update" : 1573242770976,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "90CF60AE",
+        "caption" : "austen_books()",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=90CF60AE",
+        "displayedObservations" : 73422,
+        "environment" : "_rs_no_env",
+        "expression" : "austen_books()",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 73422,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
