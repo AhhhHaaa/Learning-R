@@ -30,7 +30,7 @@ ggplot(world_map, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "lightgray", colour = "white") +
   theme(panel.background = element_blank()) +
   labs(title = "World map", caption = "maps package R")
-
+#creat EU countries
 eu.countries <- c( "Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus",
 " Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "UK"
 )

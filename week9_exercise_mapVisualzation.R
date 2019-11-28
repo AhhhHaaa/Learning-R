@@ -39,9 +39,67 @@ ggsave("cameras surrounded info_school.png")
 world_map <- map_data("world")
 #load WHO data 
 life.exp.map <- read_csv("WHO map.csv")
-#ggplot
-ggplot(world_map, aes(x = long, y = lat, group = group)) +
-  geom_ploygon(fill)
+#plot the baisc world map
+p2 <- ggplot(world_map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "grey", colour = "white") +
+  theme(panel.background = element_blank()) +
+  labs(title = "world map", caption = "maps package, R")
 
+#plot life.exp 
+
+p1 <- ggplot(life.exp.map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(aes(fill = lifeExp), colour = "white") +
+  scale_fill_viridis_c() +
+  theme_void() 
+
+#
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "lightgrey") +
+  geom_polygon(aes(fill = as.factor(life.exp.map$lifeExp)))
+
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "grey", colour = "white") 
+###test
+ggplot() +
+  geom_polygon(data = world_map,
+                        aes(x = long, y = lat, group = group),
+                            fill = "lightgrey") +
+  geom_polygon(data = life.exp.map, aes(x = long, y = lat, group = group,
+                                        fill = life.exp.map$lifeExp)) +
+  scale_fill_viridis_c() +
+  labs(fill = "Life Expectancy") +
+  theme_void() 
+
+
+
+#2 layers(world map X WHo) of ggplots 
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "lightgrey",colour = "white") +
+  geom_polygon(data = life.exp.map, 
+               aes(x = long, y = lat, group = group,
+                   fill = life.exp.map$lifeExp)) +
+  labs(fill = "Life Expectancy") +
+  scale_fill_viridis_c() + 
+  theme_void()
+#2.1 Extra: draw Life expectancy on EU.map
+
+eu.countries <- c( "Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus",
+" Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "UK"
+)
+EU.map = map_data("world", eu.countries)
+life.exp.map %>% 
+  select(reigion == eu.countries)
+
+ggplot(EU.map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(data = life.exp.map, aes(fill = life.exp.map$lifeExp, 
+               x = long, y = lat, group = group))+
+  geom_polygon(fill = "lightgrey", colour = "white") 
+  
+  
+  geom_polygon(data = Eu.,
+               aes(fill = life.exp.map$lifeExp, x = long, y = lat)) +
+  scale_fill_viridis_c() +
+  labs(fill = "Life Expectancy")
+  
 
 
