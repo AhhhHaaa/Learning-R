@@ -1,0 +1,3 @@
+ggmap(corvallis_map_bw, base_layer = ggplot(sales, aes(lon, lat))) +
+  geom_point(aes(color = class)) +
+  facet_wrap(~ class)
