@@ -1,0 +1,25 @@
+ggmap(corvallis_map_bw, base_layer = ggplot(sales, aes(lon, lat))) +
+  geom_point(aes(color = class)) +
+  facet_wrap(~ class)
+
+
+#alternatives to ggmap
+#qmplot replaces two steps get_map() and ggmap() 
+qmplot(data = sales, lon, lat, 
+       geom = "point", color = class) +
+  facet_wrap(~ class)
+
+
+#how to draw by polygons 
+ggmap(corvallis_map_bw, 
+      base_layer = ggplot(ward_sales, aes(lon, lat)),
+      extent = "normal", maprange = FALSE) +
+  geom_polygon(aes(group = group, fill = avg_price),alpha = 0.8)
+  
+  #alternative to the above code
+  use qmplot(lon, lat, data = ward_sales, geom = "polygon", group = group, fill = avg_price)
+  
+  
+  #basic combination of data 
+  
+  
