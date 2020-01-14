@@ -1,0 +1,10 @@
+ggmap(corvallis_map_bw, base_layer = ggplot(sales, aes(lon, lat))) +
+  geom_point(aes(color = class)) +
+  facet_wrap(~ class)
+
+
+#alternatives to ggmap
+#qmplot
+qmplot(lon, lat, data = sales, 
+       geom = "point", color = class) +
+  facet_wrap(~ class)
